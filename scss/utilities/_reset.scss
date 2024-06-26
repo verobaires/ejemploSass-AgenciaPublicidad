@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+}
+
+body {
+    background: $white;
+    font-family: $font-family;
+}
+
+ul{ list-style: none;}
+
+.natural-600 {
+    color: $color-natural-600;
+}
+
+.natural-700 {
+    color: $color-natural-700;
+}
+
+.natural-900 {
+    color: $color-natural-900;
+}

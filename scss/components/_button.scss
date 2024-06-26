@@ -1,0 +1,23 @@
+.button-propio {
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(16, 16, 46);
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: rgb(16, 16, 53);
+        }
+    }
+
+    &:hover {
+        background-color: white;
+    }
+
+    &.button__azul--info {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}

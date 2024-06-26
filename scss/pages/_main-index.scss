@@ -1,0 +1,136 @@
+main {
+    .hero-container {
+        margin: 150px auto;
+        display: flex;
+        animation: fade-out linear;
+        animation-timeline: view();
+        animation-range: exit -100px;
+
+        .hero-info {
+            text-align: center;
+            background: linear-gradient(rgb(179 95 235 / 36%), rgba(255, 255, 255, 0.5)), url(../img/fondoLuces.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           /*  display: flex;
+            justify-content: center;
+            flex-direction: column; */
+            @include flexbox(column, center, inherit, inherit);
+            h1 {
+                font-size: 56px;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+            p{
+                @extend %body-l;
+                color: $color-natural-700;            }
+        }
+
+        .heroimg {
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-left: 2%;
+        }
+    }
+
+    .servicios-container {
+        /* display: flex;
+        justify-content: center;
+        align-items: inherit;
+        flex-direction: inherit; */
+        @include flexbox(inherit, center, inherit, wrap);
+        margin: 10vh 0 10vh 0;
+
+        .row {
+            .servicios-info {
+                h3{
+                    color: $color-natural-900;
+                }
+                p{
+                    color : $color-natural-700;
+                    @extend %body-l;
+                }
+            }
+            .box-container {
+                display: flex;
+                width: 60%;
+                height: 60vh;
+                padding: 20px 0px 20px 20px;
+
+                .box {
+                    flex: 1;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    margin: 0 2%;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    line-height: 0;
+                    border-radius: 15px;
+
+                    &:hover {
+                        flex: 1 1 50%; /* shrink grow basis */
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    img {
+                        width: 200%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+    }
+
+    .experiencia-container {
+        display: flex;
+
+        .experiencia-info {
+            /* display: flex;
+            justify-content: center;
+            align-items: inherit;
+            flex-direction: column; */
+            @include flexbox (column, center, inherit, inherit);
+            padding-left: 100px;
+            width: 100%;
+            order: 2;
+            h3{
+                color: $color-natural-900;
+            }
+            p {
+                width: 70%;
+                padding-top: 16px;
+                padding-bottom: 30px;
+                @extend %body-l;
+                color: $color-natural-700
+                }
+            }
+
+            img {
+                height: 50vh;
+                border-radius: 15px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                animation: fade-in linear forwards;
+                animation-timeline: view();
+                animation-range: 250px 500px;
+            }
+        }
+
+        .carousel{
+            padding: 35px 0 35px 0;
+            background-color: lightgrey;
+            margin-top: 5vh;
+            margin-bottom: 10vh;
+            .carousel-item{
+                img{
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }

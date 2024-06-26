@@ -1,0 +1,30 @@
+header {
+    nav {
+        @extend %bg-white;
+
+        div.container {
+            a{
+                img.logoNavbar {
+                    border-radius: 15px;
+                    width: 25%;
+                }
+            }
+            
+
+            div.sidebar {
+                @extend %bg-white;
+            }
+
+            ul {
+                li{
+                    a{
+                        @extend %bold-m;
+                        color: $color-natural-600;
+                    }
+                                           
+                }
+            }
+
+        }
+    }
+}
